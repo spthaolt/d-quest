@@ -92,6 +92,8 @@ int main(int argc, char *argv[])
 
     qDebug() << user.userId << user.karma; // Result : QVariant(QString, "anonymous") QVariant(double, 0)
 
+    qDebug() << user.creationDate; // Result : the record creation time
+
     // Remarks: DQField can be casted to QVariant automatically
 
     connection.close(); // Please close the connection on quit.
