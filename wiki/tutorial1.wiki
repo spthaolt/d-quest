@@ -70,9 +70,9 @@ int main(int argc, char *argv[])
 
     connection.open(db); // Establish the connection to database. It will become the "default connection" shared by all DQModel
 
-    connection.addModel<User>(); // Register the a model to the connection
+    connection.addModel<User>(); // Register a model to the connection
 
-    connection.createTables(); // Create table for all added model
+    connection.createTables(); // Create table for all added model if it is not existed.
 
     User user;
 
