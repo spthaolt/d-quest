@@ -46,3 +46,6 @@ $$DQUEST_INSTALL is the installation path of DQuest.
 Then run qmake , then your application will able to build application with DQuest. 
 
 As you could see that , no matter what method is chosen , what you need is just to include dquest.pri into your project file.
+
+*Next*
+ * [tutorial1 Database model declaration]
