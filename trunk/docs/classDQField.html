@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>DQuest: DQPrimaryKey Class Reference</title>
+<title>DQuest: DQField&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -44,65 +44,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <div class="contents">
-<h1>DQPrimaryKey Class Reference</h1><!-- doxytag: class="DQPrimaryKey" --><!-- doxytag: inherits="DQField&lt; int &gt;" -->
-<p>Primary key field.  
+<h1>DQField&lt; T &gt; Class Template Reference</h1><!-- doxytag: class="DQField" --><!-- doxytag: inherits="DQBaseField" -->
+<p>Database field.  
 <a href="#_details">More...</a></p>
 
 <p><code>#include &lt;dqfield.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for DQPrimaryKey:</div>
+Inheritance diagram for DQField&lt; T &gt;:</div>
 <div class="dynsection">
  <div class="center">
-  <img src="classDQPrimaryKey.png" usemap="#DQPrimaryKey_map" alt=""/>
-  <map id="DQPrimaryKey_map" name="DQPrimaryKey_map">
-<area href="classDQField.html" alt="DQField&lt; int &gt;" shape="rect" coords="0,56,97,80"/>
-<area href="classDQBaseField.html" alt="DQBaseField" shape="rect" coords="0,0,97,24"/>
+  <img src="classDQField.png" usemap="#DQField&lt; T &gt;_map" alt=""/>
+  <map id="DQField&lt; T &gt;_map" name="DQField&lt; T &gt;_map">
+<area href="classDQBaseField.html" alt="DQBaseField" shape="rect" coords="0,0,90,24"/>
 </map>
  </div>
 </div>
 
-<p><a href="classDQPrimaryKey-members.html">List of all members.</a></p>
+<p><a href="classDQField-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27d90ef68fdf2e78d848e01f1b1ddae5"></a><!-- doxytag: member="DQPrimaryKey::operator=" ref="a27d90ef68fdf2e78d848e01f1b1ddae5" args="(const QVariant &amp;val)" -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a703a2384ed6c9e52bd7256d1a2f87aec"></a><!-- doxytag: member="DQField::operator=" ref="a703a2384ed6c9e52bd7256d1a2f87aec" args="(const QVariant &amp;val)" -->
 QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const QVariant &amp;val)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af97b044232c392fb2798a9c04d4b2c40"></a><!-- doxytag: member="DQPrimaryKey::operator==" ref="af97b044232c392fb2798a9c04d4b2c40" args="(const DQField &amp;rhs) const" -->
-bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classDQField.html">DQField</a> &amp;rhs) const</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acec82d17afefbf25d64f4d46bf404429"></a><!-- doxytag: member="DQPrimaryKey::operator==" ref="acec82d17afefbf25d64f4d46bf404429" args="(const QVariant &amp;rhs) const" -->
-bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const QVariant &amp;rhs) const</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08325fc85199eb54268f8753b0e9668b"></a><!-- doxytag: member="DQPrimaryKey::operator!=" ref="a08325fc85199eb54268f8753b0e9668b" args="(const QVariant &amp;rhs) const" -->
-bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const QVariant &amp;rhs) const</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a709e2a9cf4c89158abe94208f329822f"></a><!-- doxytag: member="DQPrimaryKey::set" ref="a709e2a9cf4c89158abe94208f329822f" args="(QVariant value)" -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af97b044232c392fb2798a9c04d4b2c40"></a><!-- doxytag: member="DQField::operator==" ref="af97b044232c392fb2798a9c04d4b2c40" args="(const DQField &amp;rhs) const " -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classDQField.html">DQField</a> &amp;rhs) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acec82d17afefbf25d64f4d46bf404429"></a><!-- doxytag: member="DQField::operator==" ref="acec82d17afefbf25d64f4d46bf404429" args="(const QVariant &amp;rhs) const " -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const QVariant &amp;rhs) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08325fc85199eb54268f8753b0e9668b"></a><!-- doxytag: member="DQField::operator!=" ref="a08325fc85199eb54268f8753b0e9668b" args="(const QVariant &amp;rhs) const " -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const QVariant &amp;rhs) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a709e2a9cf4c89158abe94208f329822f"></a><!-- doxytag: member="DQField::set" ref="a709e2a9cf4c89158abe94208f329822f" args="(QVariant value)" -->
 virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a709e2a9cf4c89158abe94208f329822f">set</a> (QVariant value)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Assign value to the field. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa86cf4e504ef5532dd76abd3a1162690"></a><!-- doxytag: member="DQPrimaryKey::get" ref="aa86cf4e504ef5532dd76abd3a1162690" args="() const " -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa86cf4e504ef5532dd76abd3a1162690"></a><!-- doxytag: member="DQField::get" ref="aa86cf4e504ef5532dd76abd3a1162690" args="() const " -->
 virtual QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#aa86cf4e504ef5532dd76abd3a1162690">get</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the value of the field. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4525fb1805a119e1f8a02a3097f8e475"></a><!-- doxytag: member="DQPrimaryKey::operator&#45;&gt;" ref="a4525fb1805a119e1f8a02a3097f8e475" args="()" -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4525fb1805a119e1f8a02a3097f8e475"></a><!-- doxytag: member="DQField::operator&#45;&gt;" ref="a4525fb1805a119e1f8a02a3097f8e475" args="()" -->
 QVariant *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a4525fb1805a119e1f8a02a3097f8e475">operator-&gt;</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Provides access to stored QVariant value. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34625c95d2baf6794ab15a2c9adbe59e"></a><!-- doxytag: member="DQPrimaryKey::operator()" ref="a34625c95d2baf6794ab15a2c9adbe59e" args="() const " -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34625c95d2baf6794ab15a2c9adbe59e"></a><!-- doxytag: member="DQField::operator()" ref="a34625c95d2baf6794ab15a2c9adbe59e" args="() const " -->
 QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a34625c95d2baf6794ab15a2c9adbe59e">operator()</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the value of the field. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cb1f4cb9501b27818453ec37570580f"></a><!-- doxytag: member="DQPrimaryKey::operator QVariant" ref="a6cb1f4cb9501b27818453ec37570580f" args="()" -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cb1f4cb9501b27818453ec37570580f"></a><!-- doxytag: member="DQField::operator QVariant" ref="a6cb1f4cb9501b27818453ec37570580f" args="()" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a6cb1f4cb9501b27818453ec37570580f">operator QVariant</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cast to QVariant. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c9970518c790bb356007470f0a6b8c1"></a><!-- doxytag: member="DQPrimaryKey::clear" ref="a0c9970518c790bb356007470f0a6b8c1" args="()" -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c9970518c790bb356007470f0a6b8c1"></a><!-- doxytag: member="DQField::clear" ref="a0c9970518c790bb356007470f0a6b8c1" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a0c9970518c790bb356007470f0a6b8c1">clear</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Free up any resources used. <br/></td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac053b55ec117e7451e342402cab6eb2c"></a><!-- doxytag: member="DQPrimaryKey::clause" ref="ac053b55ec117e7451e342402cab6eb2c" args="()" -->
-static <a class="el" href="classDQClause.html">DQClause</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQPrimaryKey.html#ac053b55ec117e7451e342402cab6eb2c">clause</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The default clause of that field type. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e5a0f071bf01560f4c47d233ca726e9"></a><!-- doxytag: member="DQPrimaryKey::type" ref="a0e5a0f071bf01560f4c47d233ca726e9" args="()" -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e5a0f071bf01560f4c47d233ca726e9"></a><!-- doxytag: member="DQField::type" ref="a0e5a0f071bf01560f4c47d233ca726e9" args="()" -->
 static QVariant::Type&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQField.html#a0e5a0f071bf01560f4c47d233ca726e9">type</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the type id of the field. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cc6673744e8e43b55bf02854f08fa39"></a><!-- doxytag: member="DQField::clause" ref="a4cc6673744e8e43b55bf02854f08fa39" args="()" -->
+static <a class="el" href="classDQClause.html">DQClause</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a4cc6673744e8e43b55bf02854f08fa39">clause</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The default clause of that field type. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Primary key field. </p>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<h3>template&lt;typename T&gt;<br/>
+ class DQField&lt; T &gt;</h3>
+
+<p>Database field. </p>
+<p><a class="el" href="classDQField.html" title="Database field.">DQField</a> store the value of a field in database model. The format is QVariant. Therefore you may assign a QVariant to <a class="el" href="classDQField.html" title="Database field.">DQField</a> direclty, and you may access the stored QVariant by using operator-&gt; or <a class="el" href="classDQBaseField.html#aa86cf4e504ef5532dd76abd3a1162690" title="Get the value of the field.">get()</a> function. </p>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/dqfield.h</li>
-<li>src/dqfield.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->

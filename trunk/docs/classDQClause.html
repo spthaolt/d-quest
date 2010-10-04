@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -83,7 +84,45 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setFlag</b> (Type typ
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>The clause of a column definition. </p>
-<dl class="author"><dt><b>Author:</b></dt><dd>Ben Lau &lt;<a href="mailto:xbenlau@gmail.com">xbenlau@gmail.com</a>&gt; </dd></dl>
+<p><a class="el" href="classDQClause.html" title="The clause of a column definition.">DQClause</a> is a data structure to describe the clause of column definition for "create table". It is used in model declaration (The second argument in DQ_FIELD macro)</p>
+<p>Example: </p>
+<div class="fragment"><pre class="fragment"><span class="keyword">class </span>User : <span class="keyword">public</span> <a class="code" href="classDQModel.html" title="Database model class.">DQModel</a>
+{
+    <a class="code" href="dqmodel_8h.html#ab21954e48fe1f711bbfc883e5ae6f241" title="The DQ_MODEL macro must appear in the class definition that declares model&amp;#39;s...">DQ_MODEL</a>
+<span class="keyword">public</span>:
+    <a class="code" href="classDQField.html" title="Database field.">DQField&lt;QString&gt;</a> userId;
+    <a class="code" href="classDQField.html" title="Database field.">DQField&lt;QString&gt;</a> name;
+
+    <a class="code" href="classDQField.html" title="Database field.">DQField&lt;QString&gt;</a> passwd;
+
+    <a class="code" href="classDQField.html" title="Database field.">DQField&lt;QDateTime&gt;</a> creationTime;
+    <a class="code" href="classDQField.html" title="Database field.">DQField&lt;QDateTime&gt;</a> lastLoginTime;
+
+};
+
+<a class="code" href="dqmodel_8h.html#ac16ac212c89d5a389eaebcf29541981e" title="Declare a model.">DQ_DECLARE_MODEL</a>( User,
+                  <span class="stringliteral">&quot;user&quot;</span>,
+                  <a class="code" href="dqmodel_8h.html#a3dd62113ebe909d6ff4c7785af818dc0" title="Declare a database field.">DQ_FIELD</a>(userId, <a class="code" href="classDQClause.html#ae882c0d88fc37dc01c016a0ceeffbe8a">DQClause</a>(DQClause::UNIQUE) | <a class="code" href="classDQClause.html#ae882c0d88fc37dc01c016a0ceeffbe8a">DQClause</a>(DQClause::NOT_NULL) ), <span class="comment">// Unique and Not null</span>
+                  <a class="code" href="dqmodel_8h.html#a3dd62113ebe909d6ff4c7785af818dc0" title="Declare a database field.">DQ_FIELD</a>(name),
+                  <a class="code" href="dqmodel_8h.html#a3dd62113ebe909d6ff4c7785af818dc0" title="Declare a database field.">DQ_FIELD</a>(passwd , <a class="code" href="classDQClause.html#ae882c0d88fc37dc01c016a0ceeffbe8a">DQClause</a>(DQClause::NOT_NULL)),
+                  <a class="code" href="dqmodel_8h.html#a3dd62113ebe909d6ff4c7785af818dc0" title="Declare a database field.">DQ_FIELD</a>(creationTime,<a class="code" href="classDQClause.html#ae882c0d88fc37dc01c016a0ceeffbe8a">DQClause</a>(DQClause::DEFAULT,<span class="stringliteral">&quot;CURRENT_TIMESTAMP&quot;</span>) ),
+                  <a class="code" href="dqmodel_8h.html#a3dd62113ebe909d6ff4c7785af818dc0" title="Declare a database field.">DQ_FIELD</a>(lastLoginTime)
+                  );
+</pre></div><p>The declaration is equivalent to make this SQL table for SQLITE</p>
+<div class="fragment"><pre class="fragment">    CREATE TABLE user  (
+        <span class="keywordtype">id</span> INTEGER PRIMARY KEY AUTOINCREMENT,
+        userId TEXT NOT NULL UNIQUE,
+        name TEXT ,
+        passwd TEXT NOT NULL,
+        creationTime DATETIME DEFAULT CURRENT_TIMESTAMP ,
+        lastLoginTime DATETIME
+    );
+</pre></div><p>Remarks: Usually you won't use <a class="el" href="classDQClause.html" title="The clause of a column definition.">DQClause</a> directly. There have wrapper macro for common clause avilable.</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="dqclause_8h.html#a400b2ce762bd0a0d6ec9b08603487b28" title="&quot;NotNull&quot; clause">DQNotNull</a> </dd>
+<dd>
+<a class="el" href="dqclause_8h.html#a75d850e5a09646901dc081d053669698" title="The &quot;Default&quot; clause.">DQDefault</a> </dd>
+<dd>
+<a class="el" href="dqclause_8h.html#aede52ea9e1a19097718c0db8053caa2d" title="&quot;Unique&quot; clause">DQUnique</a> </dd></dl>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae882c0d88fc37dc01c016a0ceeffbe8a"></a><!-- doxytag: member="DQClause::DQClause" ref="ae882c0d88fc37dc01c016a0ceeffbe8a" args="()" -->
 <div class="memitem">
@@ -99,7 +138,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setFlag</b> (Type typ
       </table>
 </div>
 <div class="memdoc">
-<dl class="author"><dt><b>Author:</b></dt><dd>Ben Lau &lt;<a href="mailto:xbenlau@gmail.com">xbenlau@gmail.com</a>&gt; </dd></dl>
+<dl class="author"><dt><b>Author:</b></dt><dd>Ben Lau </dd></dl>
 
 </div>
 </div>
@@ -126,7 +165,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setFlag</b> (Type typ
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/dqclause.h</li>
+<li>src/<a class="el" href="dqclause_8h.html">dqclause.h</a></li>
 <li>src/dqclause.cpp</li>
 </ul>
 </div>
@@ -135,7 +174,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setFlag</b> (Type typ
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -144,7 +183,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setFlag</b> (Type typ
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sun Oct 3 11:12:56 2010 for DQuest by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 4 23:59:21 2010 for DQuest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

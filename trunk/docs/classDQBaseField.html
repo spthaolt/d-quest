@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -44,12 +45,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>DQBaseField Class Reference</h1><!-- doxytag: class="DQBaseField" -->
-<p>The base class of DQField.  
+<p>The base class of <a class="el" href="classDQField.html" title="Database field.">DQField</a>.  
 <a href="#_details">More...</a></p>
 
 <p><code>#include &lt;dqbasefield.h&gt;</code></p>
-
-<p>Inherited by DQField&lt; T &gt;, and DQField&lt; int &gt;.</p>
+<div class="dynheader">
+Inheritance diagram for DQBaseField:</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="classDQBaseField.png" usemap="#DQBaseField_map" alt=""/>
+  <map id="DQBaseField_map" name="DQBaseField_map">
+<area href="classDQField.html" alt="DQField&lt; T &gt;" shape="rect" coords="0,56,128,80"/>
+<area href="classDQField.html" alt="DQField&lt; int &gt;" shape="rect" coords="138,56,266,80"/>
+<area href="classDQForeignKey.html" alt="DQForeignKey&lt; T &gt;" shape="rect" coords="69,112,197,136"/>
+<area href="classDQPrimaryKey.html" alt="DQPrimaryKey" shape="rect" coords="207,112,335,136"/>
+</map>
+ </div>
+</div>
 
 <p><a href="classDQBaseField-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
@@ -63,25 +75,24 @@ virtual QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a167e675eb89db3668da7cf641efa7347"></a><!-- doxytag: member="DQBaseField::operator=" ref="a167e675eb89db3668da7cf641efa7347" args="(const QVariant &amp;val)" -->
 virtual QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const QVariant &amp;val)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4525fb1805a119e1f8a02a3097f8e475"></a><!-- doxytag: member="DQBaseField::operator&#45;&gt;" ref="a4525fb1805a119e1f8a02a3097f8e475" args="()" -->
-QVariant *&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> ()</td></tr>
+QVariant *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a4525fb1805a119e1f8a02a3097f8e475">operator-&gt;</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Provides access to stored QVariant value. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34625c95d2baf6794ab15a2c9adbe59e"></a><!-- doxytag: member="DQBaseField::operator()" ref="a34625c95d2baf6794ab15a2c9adbe59e" args="() const " -->
 QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a34625c95d2baf6794ab15a2c9adbe59e">operator()</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the value of the field. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e1bcf0e6592f1eb1e6d842376f07887"></a><!-- doxytag: member="DQBaseField::defaultType" ref="a3e1bcf0e6592f1eb1e6d842376f07887" args="()" -->
-virtual QVariant::Type&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a3e1bcf0e6592f1eb1e6d842376f07887">defaultType</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The default/expected data type of the field. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cb1f4cb9501b27818453ec37570580f"></a><!-- doxytag: member="DQBaseField::operator QVariant" ref="a6cb1f4cb9501b27818453ec37570580f" args="()" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator QVariant</b> ()</td></tr>
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a6cb1f4cb9501b27818453ec37570580f">operator QVariant</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cast to QVariant. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c9970518c790bb356007470f0a6b8c1"></a><!-- doxytag: member="DQBaseField::clear" ref="a0c9970518c790bb356007470f0a6b8c1" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a0c9970518c790bb356007470f0a6b8c1">clear</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert this field and free up any resources used. <br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Free up any resources used. <br/></td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cc6673744e8e43b55bf02854f08fa39"></a><!-- doxytag: member="DQBaseField::clause" ref="a4cc6673744e8e43b55bf02854f08fa39" args="()" -->
 static <a class="el" href="classDQClause.html">DQClause</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQBaseField.html#a4cc6673744e8e43b55bf02854f08fa39">clause</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The default clause of that field type. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>The base class of DQField. </p>
+<p>The base class of <a class="el" href="classDQField.html" title="Database field.">DQField</a>. </p>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/dqbasefield.h</li>
 <li>src/dqbasefield.cpp</li>
@@ -92,7 +103,7 @@ static <a class="el" href="classDQClause.html">DQClause</a>&nbsp;</td><td class=
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,7 +112,7 @@ static <a class="el" href="classDQClause.html">DQClause</a>&nbsp;</td><td class=
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sun Oct 3 11:12:56 2010 for DQuest by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 4 23:59:21 2010 for DQuest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
