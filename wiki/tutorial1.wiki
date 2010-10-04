@@ -112,8 +112,7 @@ You may remove the record by :
 
 *Query*
 
- See next tutorial
+ See [tutorial2 next] tutorial
 
 == Building DQuest ==
-
-_writing_
+[buildingdquest Check this page]
