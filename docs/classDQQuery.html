@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -94,6 +95,8 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute the query and count no. of record retrieved. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQSharedQuery.html#a654c57e67ee37ea4483f749cfdda45ee">call</a> (QString func, QStringList fields=QStringList())</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute the query and call specific function on the result.  <a href="#a654c57e67ee37ea4483f749cfdda45ee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQSharedQuery.html#a6e4ec97801fba34687bed3f7df331c70">call</a> (QString func, QString field)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute the query and call specific function on the result.  <a href="#a6e4ec97801fba34687bed3f7df331c70"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQSharedQuery.html#afe36230dc5efa50e5ea9456725b5b4b9">remove</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Delete all the records fullfill the filter rules.  <a href="#afe36230dc5efa50e5ea9456725b5b4b9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f1f9c78ce1ac9f0416429a14b0f7ed7"></a><!-- doxytag: member="DQQuery::all" ref="a5f1f9c78ce1ac9f0416429a14b0f7ed7" args="()" -->
@@ -102,6 +105,8 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0ef4297145b4e4848a88ed0deddcdc9"></a><!-- doxytag: member="DQQuery::lastQuery" ref="af0ef4297145b4e4848a88ed0deddcdc9" args="()" -->
 QSqlQuery&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQSharedQuery.html#af0ef4297145b4e4848a88ed0deddcdc9">lastQuery</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the QSqlQuery object being used. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a832dba063797f053dbef29ae8c90c804"></a><!-- doxytag: member="DQQuery::reset" ref="a832dba063797f053dbef29ae8c90c804" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18f2c23017b66343dbbfd0ffc3a171e7"></a><!-- doxytag: member="DQQuery::setMetaInfo" ref="a18f2c23017b66343dbbfd0ffc3a171e7" args="(DQModelMetaInfo *info)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setMetaInfo</b> (<a class="el" href="classDQModelMetaInfo.html">DQModelMetaInfo</a> *info)</td></tr>
@@ -118,6 +123,42 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p><a class="el" href="classDQQuery.html" title="DQQuery is a template class for performing database queries and record deletion on...">DQQuery</a> is a template class for performing database queries and record deletion on specific model. </p>
 <dl class="remark"><dt><b>Remarks:</b></dt><dd>It is a implicitly shared class </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a6e4ec97801fba34687bed3f7df331c70"></a><!-- doxytag: member="DQQuery::call" ref="a6e4ec97801fba34687bed3f7df331c70" args="(QString func, QString field)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant DQSharedQuery::call </td>
+          <td>(</td>
+          <td class="paramtype">QString&nbsp;</td>
+          <td class="paramname"> <em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&nbsp;</td>
+          <td class="paramname"> <em>field</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inherited]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Execute the query and call specific function on the result. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>func</em>&nbsp;</td><td>The function name (e.g sum , avg , ...) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fields</em>&nbsp;</td><td>A list of fields that could be passed to the function </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a654c57e67ee37ea4483f749cfdda45ee"></a><!-- doxytag: member="DQQuery::call" ref="a654c57e67ee37ea4483f749cfdda45ee" args="(QString func, QStringList fields=QStringList())" -->
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +251,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -219,7 +260,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sun Oct 3 11:12:56 2010 for DQuest by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 4 23:59:21 2010 for DQuest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

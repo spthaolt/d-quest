@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -114,6 +115,9 @@ Here is a list of all documented class members with links to the class documenta
 <li>close()
 : <a class="el" href="classDQConnection.html#ab4508871169186c0a0c2d06cdec4ab37">DQConnection</a>
 </li>
+<li>connection()
+: <a class="el" href="classDQModel.html#ab5ff5bc7dbb32397751d8671e409c900">DQModel</a>
+</li>
 <li>count()
 : <a class="el" href="classDQSharedQuery.html#a371f26bb8cec5fafe81738ecbe899601">DQSharedQuery</a>
 </li>
@@ -121,7 +125,7 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classDQModelMetaInfo.html#a9ae4e5ef60edb74683b8edb9dc4d7f4f">DQModelMetaInfo</a>
 </li>
 <li>createTableIfNotExists()
-: <a class="el" href="classDQSql.html#a0538378e28c40b653f547f14b5ce99c0">DQSql</a>
+: <a class="el" href="classDQSql.html#aca4cb6dfbf49f5be9cb7a6e692005426">DQSql</a>
 </li>
 <li>createTables()
 : <a class="el" href="classDQConnection.html#a04d8bfa08e2f5e7c53961393215a4c96">DQConnection</a>
@@ -138,9 +142,6 @@ Here is a list of all documented class members with links to the class documenta
 </li>
 <li>defaultConnection()
 : <a class="el" href="classDQConnection.html#a95f1d7b3baf3c78e38c1f9e11ed71948">DQConnection</a>
-</li>
-<li>defaultType()
-: <a class="el" href="classDQBaseField.html#a3e1bcf0e6592f1eb1e6d842376f07887">DQBaseField</a>
 </li>
 <li>dqMetaInfo
 : <a class="el" href="classDQModelMetaInfo.html#a3110615a7414a1afa3f11292dfd05568">DQModelMetaInfo</a>
@@ -193,7 +194,7 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classDQModel.html#ab686576bf7111eca518d68f56ab19598">DQModel</a>
 </li>
 <li>initialData()
-: <a class="el" href="classDQModel.html#a65e909036c074780c040028f2f1c2164">DQModel</a>
+: <a class="el" href="classDQModel.html#a2aa1bf4015bd056e11e96994d782be56">DQModel</a>
 , <a class="el" href="classDQModelMetaInfo.html#af3c07bca76f7de40a5240ecaff1386b8">DQModelMetaInfo</a>
 </li>
 <li>insertInto()
@@ -214,9 +215,8 @@ Here is a list of all documented class members with links to the class documenta
 <h3><a class="anchor" id="index_l">- l -</a></h3><ul>
 <li>lastQuery()
 : <a class="el" href="classDQConnection.html#a6fd8ad7aac33f470f32c3e308825ab8e">DQConnection</a>
-, <a class="el" href="classDQModel.html#acf2de8932b9638c92b20b8c9eb89876c">DQModel</a>
-, <a class="el" href="classDQSql.html#a9aa5a1561cbd73dc5f4c271874adc072">DQSql</a>
 , <a class="el" href="classDQSharedQuery.html#af0ef4297145b4e4848a88ed0deddcdc9">DQSharedQuery</a>
+, <a class="el" href="classDQSql.html#a9aa5a1561cbd73dc5f4c271874adc072">DQSql</a>
 </li>
 <li>left()
 : <a class="el" href="classDQWhere.html#ad6da032a0c2342fe2d90c2a1aab98d72">DQWhere</a>
@@ -231,8 +231,11 @@ Here is a list of all documented class members with links to the class documenta
 
 
 <h3><a class="anchor" id="index_m">- m -</a></h3><ul>
+<li>DQModel()
+: <a class="el" href="classDQModel.html#a98155a41ca77a21f7c897255c8419c8d">DQModel</a>
+</li>
 <li>metaInfo()
-: <a class="el" href="classDQAbstractModel.html#a676870b74accb494f15e991fbb312734">DQAbstractModel</a>
+: <a class="el" href="classDQAbstractModel.html#ab03df8f9993c3fc76f41b0d40eacfa41">DQAbstractModel</a>
 </li>
 </ul>
 
@@ -254,8 +257,15 @@ Here is a list of all documented class members with links to the class documenta
 <li>open()
 : <a class="el" href="classDQConnection.html#a866ec3798eec9615bbdf491664f6f14f">DQConnection</a>
 </li>
+<li>operator QVariant()
+: <a class="el" href="classDQBaseField.html#a6cb1f4cb9501b27818453ec37570580f">DQBaseField</a>
+</li>
 <li>operator()()
 : <a class="el" href="classDQBaseField.html#a34625c95d2baf6794ab15a2c9adbe59e">DQBaseField</a>
+</li>
+<li>operator-&gt;()
+: <a class="el" href="classDQBaseField.html#a4525fb1805a119e1f8a02a3097f8e475">DQBaseField</a>
+, <a class="el" href="classDQForeignKey.html#a96261988ee2eb9e8cebd6ec415ee5e0f">DQForeignKey&lt; T &gt;</a>
 </li>
 <li>operator|()
 : <a class="el" href="classDQClause.html#a157d5e9daa642490f7530aba2fe1dc4d">DQClause</a>
@@ -299,14 +309,17 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classDQSql.html#a4cf50ec3f96dcee4571a5045533e2f08">DQSql</a>
 </li>
 <li>save()
-: <a class="el" href="classDQAbstractModel.html#a7907eb99eba57b5611c7593b96bf92ae">DQAbstractModel</a>
-, <a class="el" href="classDQModel.html#a0f2b6aac1b695256873defd626dfa1c1">DQModel</a>
+: <a class="el" href="classDQModel.html#a6807b1e090625800c949662485fd4fea">DQModel</a>
+, <a class="el" href="classDQAbstractModel.html#a15358dd33ad88210b44233337ad8b065">DQAbstractModel</a>
 </li>
 <li>set()
 : <a class="el" href="classDQBaseField.html#a709e2a9cf4c89158abe94208f329822f">DQBaseField</a>
 </li>
 <li>setConnection()
 : <a class="el" href="classDQModel.html#aa11d33a6e369492497a81e5506cef3a1">DQModel</a>
+</li>
+<li>setLastQuery()
+: <a class="el" href="classDQConnection.html#aaa2cf5aea1936b578dac2f3b4676783a">DQConnection</a>
 </li>
 <li>setName()
 : <a class="el" href="classDQModelMetaInfo.html#a6408024aed561357cb6a88a369c08ac0">DQModelMetaInfo</a>
@@ -318,8 +331,8 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classDQModelMetaInfo.html#a1a901b20d122239e23a376a2b0153010">DQModelMetaInfo</a>
 </li>
 <li>size()
-: <a class="el" href="classDQModelMetaInfo.html#a47f30ad11cbae0cf724d1b5d3bd781c3">DQModelMetaInfo</a>
-, <a class="el" href="classDQSharedList.html#a7686c471ce10b212b120ac2676d466e8">DQSharedList</a>
+: <a class="el" href="classDQSharedList.html#a7686c471ce10b212b120ac2676d466e8">DQSharedList</a>
+, <a class="el" href="classDQModelMetaInfo.html#a47f30ad11cbae0cf724d1b5d3bd781c3">DQModelMetaInfo</a>
 </li>
 <li>sql()
 : <a class="el" href="classDQConnection.html#abfef4315ba931c8e3343a50954e5fb98">DQConnection</a>
@@ -328,11 +341,11 @@ Here is a list of all documented class members with links to the class documenta
 
 
 <h3><a class="anchor" id="index_t">- t -</a></h3><ul>
-<li>tableName()
-: <a class="el" href="classDQModel.html#a211f57270c1452aee2435b7c32607b98">DQModel</a>
-</li>
 <li>TableName()
 : <a class="el" href="classDQModel.html#aaa91eee782f3562b990b3b30828847aa">DQModel</a>
+</li>
+<li>tableName()
+: <a class="el" href="classDQModel.html#a1d4cb3f088c2817587bce92f08ee66fd">DQModel</a>
 </li>
 <li>testFlag()
 : <a class="el" href="classDQClause.html#a49f02542c1958181e10b455fc1cc7213">DQClause</a>
@@ -340,12 +353,15 @@ Here is a list of all documented class members with links to the class documenta
 <li>toString()
 : <a class="el" href="classDQWhere.html#a46cc776af39a3999ebadece429a9c334">DQWhere</a>
 </li>
+<li>type()
+: <a class="el" href="classDQField.html#a0e5a0f071bf01560f4c47d233ca726e9">DQField&lt; T &gt;</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_v">- v -</a></h3><ul>
 <li>value()
-: <a class="el" href="classDQModelMetaInfo.html#abee0f3169c59699207c34f57dad6a0ae">DQModelMetaInfo</a>
+: <a class="el" href="classDQModelMetaInfo.html#a7d08d6f8c2f45b43171c590a360fc3ac">DQModelMetaInfo</a>
 , <a class="el" href="classDQSharedQuery.html#a2e4b80d4ddab5c7476fd5795a7321f0a">DQSharedQuery</a>
 </li>
 </ul>
@@ -362,7 +378,7 @@ Here is a list of all documented class members with links to the class documenta
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -371,7 +387,7 @@ Here is a list of all documented class members with links to the class documenta
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sun Oct 3 11:12:56 2010 for DQuest by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 4 23:59:21 2010 for DQuest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

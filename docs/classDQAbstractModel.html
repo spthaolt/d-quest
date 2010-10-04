@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -62,16 +63,16 @@ Inheritance diagram for DQAbstractModel:</div>
 <p><a href="classDQAbstractModel-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a676870b74accb494f15e991fbb312734"></a><!-- doxytag: member="DQAbstractModel::metaInfo" ref="a676870b74accb494f15e991fbb312734" args="()" -->
-virtual <a class="el" href="classDQModelMetaInfo.html">DQModelMetaInfo</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQAbstractModel.html#a676870b74accb494f15e991fbb312734">metaInfo</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab03df8f9993c3fc76f41b0d40eacfa41"></a><!-- doxytag: member="DQAbstractModel::metaInfo" ref="ab03df8f9993c3fc76f41b0d40eacfa41" args="() const " -->
+virtual <a class="el" href="classDQModelMetaInfo.html">DQModelMetaInfo</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQAbstractModel.html#ab03df8f9993c3fc76f41b0d40eacfa41">metaInfo</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the meta info object of the model. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQAbstractModel.html#a7907eb99eba57b5611c7593b96bf92ae">save</a> (bool forceInsert=false)=0</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Save the record to database.  <a href="#a7907eb99eba57b5611c7593b96bf92ae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQAbstractModel.html#a15358dd33ad88210b44233337ad8b065">save</a> (bool forceInsert=false, bool forceAllField=false)=0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Save the record to database.  <a href="#a15358dd33ad88210b44233337ad8b065"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Abstract Data Model. </p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a7907eb99eba57b5611c7593b96bf92ae"></a><!-- doxytag: member="DQAbstractModel::save" ref="a7907eb99eba57b5611c7593b96bf92ae" args="(bool forceInsert=false)=0" -->
+<a class="anchor" id="a15358dd33ad88210b44233337ad8b065"></a><!-- doxytag: member="DQAbstractModel::save" ref="a15358dd33ad88210b44233337ad8b065" args="(bool forceInsert=false, bool forceAllField=false)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -79,9 +80,18 @@ virtual <a class="el" href="classDQModelMetaInfo.html">DQModelMetaInfo</a> *&nbs
           <td class="memname">virtual bool DQAbstractModel::save </td>
           <td>(</td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>forceInsert</em> = <code>false</code></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [pure virtual]</code></td>
+          <td class="paramname"> <em>forceInsert</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>forceAllField</em> = <code>false</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -90,13 +100,14 @@ virtual <a class="el" href="classDQModelMetaInfo.html">DQModelMetaInfo</a> *&nbs
 <p>Save the record to database. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>forceInsert</em>&nbsp;</td><td>TRUE if the data should be inserted to the database as a new record regardless of the original id. The id field will be updated after operation.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>forceInsert</em>&nbsp;</td><td>TRUE if the data should be inserted to the database as a new record regardless of the original id. The id field will be updated after operation. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>forceAllField</em>&nbsp;</td><td>TRUE if all the field should be saved no matter it is null or not. If false, then null field will be skipped.</td></tr>
   </table>
   </dd>
 </dl>
 <p>If the id is not set , the record will be inserted to the database , then id field will be updated automatically. The successive call will update the record instead of insert unless forceInsert is TRUE. </p>
 
-<p>Implemented in <a class="el" href="classDQModel.html#a0f2b6aac1b695256873defd626dfa1c1">DQModel</a>.</p>
+<p>Implemented in <a class="el" href="classDQModel.html#a6807b1e090625800c949662485fd4fea">DQModel</a>.</p>
 
 </div>
 </div>
@@ -110,7 +121,7 @@ virtual <a class="el" href="classDQModelMetaInfo.html">DQModelMetaInfo</a> *&nbs
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,7 +130,7 @@ virtual <a class="el" href="classDQModelMetaInfo.html">DQModelMetaInfo</a> *&nbs
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sun Oct 3 11:12:56 2010 for DQuest by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 4 23:59:21 2010 for DQuest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

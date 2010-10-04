@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -95,7 +96,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A helper class for SQL statement exeuction. </p>
-<p><a class="el" href="classDQSql.html" title="A helper class for SQL statement exeuction.">DQSql</a> provides a set of pre-defined SQL operation over the connected database. It is a thread safe object (not verified) and support implicitly sharing. Normally, you should get a copy of instance through <a class="el" href="classDQConnection.html" title="Connection to QSqlDatabase.">DQConnection</a> from any thread. You may call it freely and don't need to worry will errorString() be overriden in another thread. A deep copy of object will be created when error.</p>
+<p><a class="el" href="classDQSql.html" title="A helper class for SQL statement exeuction.">DQSql</a> provides a set of pre-defined SQL operation over the connected database. It is a thread safe object (not verified) and support implicitly sharing. Normally, you should get a copy of instance through <a class="el" href="classDQConnection.html" title="Connection to QSqlDatabase.">DQConnection</a> from any thread. You may call it freely and don't need to worry will <a class="el" href="classDQSql.html#a9aa5a1561cbd73dc5f4c271874adc072" title="The last query object.">lastQuery()</a> be overriden in another thread. A deep copy of object will be created when error.</p>
 <dl class="remark"><dt><b>Remarks:</b></dt><dd>The thread safe capability is not verified. </dd>
 <dd>
 It is implicitly shared classes </dd></dl>
@@ -253,7 +254,7 @@ It is implicitly shared classes </dd></dl>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -262,7 +263,7 @@ It is implicitly shared classes </dd></dl>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sun Oct 3 11:12:56 2010 for DQuest by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 4 23:59:21 2010 for DQuest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -69,8 +70,8 @@ const DQModelMetaInfoField *&nbsp;</td><td class="memItemRight" valign="bottom">
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a901b20d122239e23a376a2b0153010"></a><!-- doxytag: member="DQModelMetaInfo::setValue" ref="a1a901b20d122239e23a376a2b0153010" args="(DQAbstractModel *model, QString field, const QVariant &amp;val)" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQModelMetaInfo.html#a1a901b20d122239e23a376a2b0153010">setValue</a> (<a class="el" href="classDQAbstractModel.html">DQAbstractModel</a> *model, QString field, const QVariant &amp;val)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set value of a field on a model. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abee0f3169c59699207c34f57dad6a0ae"></a><!-- doxytag: member="DQModelMetaInfo::value" ref="abee0f3169c59699207c34f57dad6a0ae" args="(DQAbstractModel *model, QString field) const " -->
-QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQModelMetaInfo.html#abee0f3169c59699207c34f57dad6a0ae">value</a> (<a class="el" href="classDQAbstractModel.html">DQAbstractModel</a> *model, QString field) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d08d6f8c2f45b43171c590a360fc3ac"></a><!-- doxytag: member="DQModelMetaInfo::value" ref="a7d08d6f8c2f45b43171c590a360fc3ac" args="(const DQAbstractModel *model, QString field) const " -->
+QVariant&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQModelMetaInfo.html#a7d08d6f8c2f45b43171c590a360fc3ac">value</a> (const <a class="el" href="classDQAbstractModel.html">DQAbstractModel</a> *model, QString field) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get value of a field from a model. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc4a5bd42ac907a92874c73834d4eb51"></a><!-- doxytag: member="DQModelMetaInfo::name" ref="acc4a5bd42ac907a92874c73834d4eb51" args="() const " -->
 QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQModelMetaInfo.html#acc4a5bd42ac907a92874c73834d4eb51">name</a> () const </td></tr>
@@ -116,7 +117,7 @@ template&lt;typename T &gt; </td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -125,7 +126,7 @@ template&lt;typename T &gt; </td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sun Oct 3 11:12:56 2010 for DQuest by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 4 23:59:21 2010 for DQuest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

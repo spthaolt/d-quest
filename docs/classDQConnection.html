@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -82,9 +83,9 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86de58b5b1df1b046c0a8e71c80eadaf"></a><!-- doxytag: member="DQConnection::query" ref="a86de58b5b1df1b046c0a8e71c80eadaf" args="()" -->
 QSqlQuery&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQConnection.html#a86de58b5b1df1b046c0a8e71c80eadaf">query</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a QSqlQuery object to the connected database. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fd8ad7aac33f470f32c3e308825ab8e"></a><!-- doxytag: member="DQConnection::lastQuery" ref="a6fd8ad7aac33f470f32c3e308825ab8e" args="()" -->
-QSqlQuery&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQConnection.html#a6fd8ad7aac33f470f32c3e308825ab8e">lastQuery</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The last query with error used by <a class="el" href="classDQConnection.html" title="Connection to QSqlDatabase.">DQConnection</a>. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QSqlQuery&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQConnection.html#a6fd8ad7aac33f470f32c3e308825ab8e">lastQuery</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The last query with error used by <a class="el" href="classDQConnection.html" title="Connection to QSqlDatabase.">DQConnection</a>.  <a href="#a6fd8ad7aac33f470f32c3e308825ab8e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQConnection.html#aaa2cf5aea1936b578dac2f3b4676783a">setLastQuery</a> (QSqlQuery query)</td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDQConnection.html">DQConnection</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDQConnection.html#a95f1d7b3baf3c78e38c1f9e11ed71948">defaultConnection</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the default connection object.  <a href="#a95f1d7b3baf3c78e38c1f9e11ed71948"></a><br/></td></tr>
@@ -165,6 +166,46 @@ template&lt;typename T &gt; </div>
 </pre></div> 
 </div>
 </div>
+<a class="anchor" id="a6fd8ad7aac33f470f32c3e308825ab8e"></a><!-- doxytag: member="DQConnection::lastQuery" ref="a6fd8ad7aac33f470f32c3e308825ab8e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSqlQuery DQConnection::lastQuery </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The last query with error used by <a class="el" href="classDQConnection.html" title="Connection to QSqlDatabase.">DQConnection</a>. </p>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>It is thread-safe function </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaa2cf5aea1936b578dac2f3b4676783a"></a><!-- doxytag: member="DQConnection::setLastQuery" ref="aaa2cf5aea1936b578dac2f3b4676783a" args="(QSqlQuery query)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DQConnection::setLastQuery </td>
+          <td>(</td>
+          <td class="paramtype">QSqlQuery&nbsp;</td>
+          <td class="paramname"> <em>query</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Set the last query The last query with error used by <a class="el" href="classDQConnection.html" title="Connection to QSqlDatabase.">DQConnection</a>  </p>
+<dl class="remark"><dt><b>Remarks:</b></dt><dd>It is thread-safe function </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/dqconnection.h</li>
 <li>src/dqconnection.cpp</li>
@@ -175,7 +216,7 @@ template&lt;typename T &gt; </div>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -184,7 +225,7 @@ template&lt;typename T &gt; </div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sun Oct 3 11:12:56 2010 for DQuest by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 4 23:59:21 2010 for DQuest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
