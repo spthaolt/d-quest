@@ -12,7 +12,9 @@ Checkout from launchpad:
 
 - The source code of DQuest held in launchpad, you may get the source code by using Bazaar.
 
-{{{ bzr branch lp:dquest }}}
+{{{ 
+bzr branch lp:dquest 
+}}}
 
 
 == Step 2 - Build DQuest ==
