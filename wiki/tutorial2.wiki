@@ -1,5 +1,41 @@
 = Database Query =
 
+DQuest provides two methods to load data from database
+
+ # DQModel::load()
+ # DQQuery class
+
+=== DQModel::load() ===
+
+The DQModel::load() support to load a single record from database and store to the the current DQModel() instance. 
+
+The function take an argument with type of DQWhere , which can represent the filter rules. 
+
+It has demonstrated the usage in last tutorial:
+
+{{{
+
+    User user;
+
+    if (!user.load( DQWhere("userId") == "anonymous" )) { // Load the record from database where userId = anonymous
+        // The account is not existed. Insert by ourself.
+
+        user.userId = "anonymous"; // Assign the field value directly.
+        user.karma = 0;
+
+        user.save() ; // Save the record to database
+    }
+
+}}}
+
+The rule stored in DQWhere can be more complex. Please refer to the API document on its advanced usage.
+
+=== DQQuery ===
+
+DQQuery is a class to query record from database. Unlike DQModel::load(), it can query for multiple record , and it provides more advanced interface and filter rules.
+
+Example code:
+
 {{{
 #include <QtCore/QCoreApplication>
 #include <dquest.h>
