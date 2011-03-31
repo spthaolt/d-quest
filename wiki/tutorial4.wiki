@@ -190,3 +190,5 @@ int main(int argc, char *argv[])
     return 0;
 }
 }}}
+
+Next tutorial - [tutorial5 Create Index] 
