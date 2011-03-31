@@ -1,0 +1,255 @@
+\hypertarget{classDQModel}{
+\section{DQModel Class Reference}
+\label{classDQModel}\index{DQModel@{DQModel}}
+}
+
+
+Database model class.  
+
+
+
+
+{\ttfamily \#include $<$dqmodel.h$>$}
+
+Inheritance diagram for DQModel:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDQModel}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries DQModelDefined} =  0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDQModel_a98155a41ca77a21f7c897255c8419c8d}{DQModel} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDQModel}{DQModel} default constructor. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQModel_aadeafc9b34a68ee9242b53b42e4f58f9}{
+\hyperlink{classDQModel_aadeafc9b34a68ee9242b53b42e4f58f9}{DQModel} (\hyperlink{classDQConnection}{DQConnection} connection)}
+\label{classDQModel_aadeafc9b34a68ee9242b53b42e4f58f9}
+
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classDQModel}{DQModel} object and set the database connection. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQModel_a1d4cb3f088c2817587bce92f08ee66fd}{
+virtual QString \hyperlink{classDQModel_a1d4cb3f088c2817587bce92f08ee66fd}{tableName} () const }
+\label{classDQModel_a1d4cb3f088c2817587bce92f08ee66fd}
+
+\begin{DoxyCompactList}\small\item\em The table name. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQModel_aa11d33a6e369492497a81e5506cef3a1}{
+void \hyperlink{classDQModel_aa11d33a6e369492497a81e5506cef3a1}{setConnection} (\hyperlink{classDQConnection}{DQConnection} connection)}
+\label{classDQModel_aa11d33a6e369492497a81e5506cef3a1}
+
+\begin{DoxyCompactList}\small\item\em Change the connection. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQModel_ab5ff5bc7dbb32397751d8671e409c900}{
+\hyperlink{classDQConnection}{DQConnection} \hyperlink{classDQModel_ab5ff5bc7dbb32397751d8671e409c900}{connection} ()}
+\label{classDQModel_ab5ff5bc7dbb32397751d8671e409c900}
+
+\begin{DoxyCompactList}\small\item\em Get the current connection. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classDQModel_a6807b1e090625800c949662485fd4fea}{save} (bool forceInsert=false, bool forceAllField=false)
+\begin{DoxyCompactList}\small\item\em Save the record to database. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQModel_a73e051b5a4c29270223f6386115f072d}{
+bool \hyperlink{classDQModel_a73e051b5a4c29270223f6386115f072d}{load} (\hyperlink{classDQWhere}{DQWhere} where)}
+\label{classDQModel_a73e051b5a4c29270223f6386115f072d}
+
+\begin{DoxyCompactList}\small\item\em Load the record that first match with filter. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classDQModel_a310ed15d9b677f9ca81947b6235ab1cf}{remove} ()
+\begin{DoxyCompactList}\small\item\em Remove the record from database. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classDQModel_a13283b3db16c67abfff71aac8811464d}{clean} ()
+\begin{DoxyCompactList}\small\item\em Model fields validation. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classDQSharedList}{DQSharedList} \hyperlink{classDQModel_a2aa1bf4015bd056e11e96994d782be56}{initialData} () const 
+\begin{DoxyCompactList}\small\item\em The list of initial data which should be inserted to database during table creation. Derived class should override the function to provide their custom record. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQAbstractModel_ab03df8f9993c3fc76f41b0d40eacfa41}{
+virtual \hyperlink{classDQModelMetaInfo}{DQModelMetaInfo} $\ast$ \hyperlink{classDQAbstractModel_ab03df8f9993c3fc76f41b0d40eacfa41}{metaInfo} () const }
+\label{classDQAbstractModel_ab03df8f9993c3fc76f41b0d40eacfa41}
+
+\begin{DoxyCompactList}\small\item\em Get the meta info object of the model. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDQModel_aaa91eee782f3562b990b3b30828847aa}{
+static QString \hyperlink{classDQModel_aaa91eee782f3562b990b3b30828847aa}{TableName} ()}
+\label{classDQModel_aaa91eee782f3562b990b3b30828847aa}
+
+\begin{DoxyCompactList}\small\item\em The table name. \item\end{DoxyCompactList}\item 
+static \hyperlink{classDQSharedQuery}{DQSharedQuery} \hyperlink{classDQModel_a577a69bf134bad26792408f7c909cfb3}{objects} ()
+\begin{DoxyCompactList}\small\item\em Return a query object to retrieve record from this model. \item\end{DoxyCompactList}\item 
+static \hyperlink{classDQSharedQuery}{DQSharedQuery} \hyperlink{classDQModel_a00c41ffc96fcd6ca420c98b7c7830756}{objects} (\hyperlink{classDQConnection}{DQConnection} connection)
+\begin{DoxyCompactList}\small\item\em Return a query object to retrieve record from this model for specific database connection. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDQModel_ab686576bf7111eca518d68f56ab19598}{
+\hyperlink{classDQPrimaryKey}{DQPrimaryKey} \hyperlink{classDQModel_ab686576bf7111eca518d68f56ab19598}{id}}
+\label{classDQModel_ab686576bf7111eca518d68f56ab19598}
+
+\begin{DoxyCompactList}\small\item\em The primary key. It is default field for every model. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Database model class. \hyperlink{classDQModel}{DQModel} is the core of DQuest that provide an ORM interface to sql database table. To declare your database model, you should:
+
+
+\begin{DoxyItemize}
+\item Create a class that inherits \hyperlink{classDQModel}{DQModel}  
+\item Added a DQ\_\-MODEL macro to the class declaration 
+\item Design your database field by using \hyperlink{classDQField}{DQField} template type 
+\item Register your model with DQ\_\-DECLARE\_\-MODEL macro function.  
+\end{DoxyItemize}
+
+\hyperlink{classDQModel}{DQModel} can only access a single record in a time. If you need to query multiple record , you should use \hyperlink{classDQQuery}{DQQuery}. (You may call YourModel::objects() to obtain a \hyperlink{classDQQuery}{DQQuery} for current model and connection. )
+
+\hyperlink{classDQModel}{DQModel} itself do not store used query and error message occur. You should call \hyperlink{classDQConnection_a6fd8ad7aac33f470f32c3e308825ab8e}{DQConnection.lastQuery} to obtain the last query object (QSqlQuery). It contains the sql being executed and error found.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{dqmodel_8h_ab21954e48fe1f711bbfc883e5ae6f241}{DQ\_\-MODEL} 
+
+\hyperlink{dqmodel_8h_ac16ac212c89d5a389eaebcf29541981e}{DQ\_\-DECLARE\_\-MODEL} 
+
+\hyperlink{classDQQuery}{DQQuery} 
+
+\hyperlink{classDQList}{DQList} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQModel_a98155a41ca77a21f7c897255c8419c8d}{
+\index{DQModel@{DQModel}!DQModel@{DQModel}}
+\index{DQModel@{DQModel}!DQModel@{DQModel}}
+\subsubsection[{DQModel}]{\setlength{\rightskip}{0pt plus 5cm}DQModel::DQModel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classDQModel_a98155a41ca77a21f7c897255c8419c8d}
+
+
+\hyperlink{classDQModel}{DQModel} default constructor. 
+
+The default constructor will set the connection object to be the Default connection. So you should use this constructor for single database application 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQModel_a13283b3db16c67abfff71aac8811464d}{
+\index{DQModel@{DQModel}!clean@{clean}}
+\index{clean@{clean}!DQModel@{DQModel}}
+\subsubsection[{clean}]{\setlength{\rightskip}{0pt plus 5cm}bool DQModel::clean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classDQModel_a13283b3db16c67abfff71aac8811464d}
+
+
+Model fields validation. 
+
+This method should be used to provide custom model validation, and to modify attributes on your model if desired.
+
+If the derived class do not implement their own clean function , it will always return TRUE (No error)
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDQModel_a6807b1e090625800c949662485fd4fea}{save} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+TRUE if no error was found. 
+\end{DoxyReturn}
+\hypertarget{classDQModel_a2aa1bf4015bd056e11e96994d782be56}{
+\index{DQModel@{DQModel}!initialData@{initialData}}
+\index{initialData@{initialData}!DQModel@{DQModel}}
+\subsubsection[{initialData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DQSharedList} DQModel::initialData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classDQModel_a2aa1bf4015bd056e11e96994d782be56}
+
+
+The list of initial data which should be inserted to database during table creation. Derived class should override the function to provide their custom record. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDQConnection_a04d8bfa08e2f5e7c53961393215a4c96}{DQConnection::createTables} 
+
+\hyperlink{classDQListWriter}{DQListWriter} 
+\end{DoxySeeAlso}
+\hypertarget{classDQModel_a00c41ffc96fcd6ca420c98b7c7830756}{
+\index{DQModel@{DQModel}!objects@{objects}}
+\index{objects@{objects}!DQModel@{DQModel}}
+\subsubsection[{objects}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf DQSharedQuery} DQModel::objects (
+\begin{DoxyParamCaption}
+\item[{{\bf DQConnection}}]{ connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDQModel_a00c41ffc96fcd6ca420c98b7c7830756}
+
+
+Return a query object to retrieve record from this model for specific database connection. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em connecion}]The connection It is a overloaded function \end{DoxyParams}
+\hypertarget{classDQModel_a577a69bf134bad26792408f7c909cfb3}{
+\index{DQModel@{DQModel}!objects@{objects}}
+\index{objects@{objects}!DQModel@{DQModel}}
+\subsubsection[{objects}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf DQSharedQuery} DQModel::objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDQModel_a577a69bf134bad26792408f7c909cfb3}
+
+
+Return a query object to retrieve record from this model. 
+
+The DQ\_\-MODEL macro will add an \hyperlink{classDQModel_a577a69bf134bad26792408f7c909cfb3}{objects()} function for the derived class. It will return a \hyperlink{classDQSharedQuery}{DQSharedQuery} / DQQuery$<$T$>$ object instance to query data from this data model.
+
+It provides a faster coding way for you to retrieve data:
+
+Example code: 
+\begin{DoxyCode}
+    qDebug() << User::objects().call("sum","karma").toInt(); // User is a DQModel
+      .
+\end{DoxyCode}
+ \hypertarget{classDQModel_a310ed15d9b677f9ca81947b6235ab1cf}{
+\index{DQModel@{DQModel}!remove@{remove}}
+\index{remove@{remove}!DQModel@{DQModel}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}bool DQModel::remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classDQModel_a310ed15d9b677f9ca81947b6235ab1cf}
+
+
+Remove the record from database. 
+
+\begin{DoxyReturn}{Returns}
+TRUE if the record is successfully removed 
+\end{DoxyReturn}
+\hypertarget{classDQModel_a6807b1e090625800c949662485fd4fea}{
+\index{DQModel@{DQModel}!save@{save}}
+\index{save@{save}!DQModel@{DQModel}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}bool DQModel::save (
+\begin{DoxyParamCaption}
+\item[{bool}]{ forceInsert = {\ttfamily false}, }
+\item[{bool}]{ forceAllField = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classDQModel_a6807b1e090625800c949662485fd4fea}
+
+
+Save the record to database. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em forceInsert}]TRUE if the data should be inserted to the database as a new record regardless of the original id. The id field will be updated after operation. \item[{\em forceAllField}]TRUE if all the field should be saved no matter it is null or not. If false, then null field will be skipped.\end{DoxyParams}
+If the id is not set , the record will be inserted to the database , then id field will be updated automatically. The successive call will update the record instead of insert unless forceInsert is TRUE. 
+
+Implements \hyperlink{classDQAbstractModel_a15358dd33ad88210b44233337ad8b065}{DQAbstractModel}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{dqmodel_8h}{dqmodel.h}\item 
+src/dqmodel.cpp\end{DoxyCompactItemize}

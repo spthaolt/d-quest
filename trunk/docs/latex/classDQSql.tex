@@ -1,0 +1,195 @@
+\hypertarget{classDQSql}{
+\section{DQSql Class Reference}
+\label{classDQSql}\index{DQSql@{DQSql}}
+}
+
+
+A helper class for SQL statement exeuction.  
+
+
+
+
+{\ttfamily \#include $<$dqsql.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDQSql_a4be9d345a9ebe39ff8e90282831fd763}{
+\hyperlink{classDQSql_a4be9d345a9ebe39ff8e90282831fd763}{DQSql} (const \hyperlink{classDQSql}{DQSql} \&)}
+\label{classDQSql_a4be9d345a9ebe39ff8e90282831fd763}
+
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_aea11795301aa7f38e23216f965bf5903}{
+\hyperlink{classDQSql_aea11795301aa7f38e23216f965bf5903}{$\sim$DQSql} ()}
+\label{classDQSql_aea11795301aa7f38e23216f965bf5903}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_ac90e473d732f1fa163ca58c0cbbae86c}{
+DQSqlStatement $\ast$ \hyperlink{classDQSql_ac90e473d732f1fa163ca58c0cbbae86c}{statement} ()}
+\label{classDQSql_ac90e473d732f1fa163ca58c0cbbae86c}
+
+\begin{DoxyCompactList}\small\item\em Get the associated DQSqlStatement generator. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_ac7774b96b9dd3fa4a6bdb56888c8993a}{
+QSqlDatabase \hyperlink{classDQSql_ac7774b96b9dd3fa4a6bdb56888c8993a}{database} ()}
+\label{classDQSql_ac7774b96b9dd3fa4a6bdb56888c8993a}
+
+\begin{DoxyCompactList}\small\item\em The connected database. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_aca4cb6dfbf49f5be9cb7a6e692005426}{
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classDQSql_aca4cb6dfbf49f5be9cb7a6e692005426}{createTableIfNotExists} ()}
+\label{classDQSql_aca4cb6dfbf49f5be9cb7a6e692005426}
+
+\begin{DoxyCompactList}\small\item\em Run create table of a model. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_a0538378e28c40b653f547f14b5ce99c0}{
+bool \hyperlink{classDQSql_a0538378e28c40b653f547f14b5ce99c0}{createTableIfNotExists} (\hyperlink{classDQModelMetaInfo}{DQModelMetaInfo} $\ast$info)}
+\label{classDQSql_a0538378e28c40b653f547f14b5ce99c0}
+
+\begin{DoxyCompactList}\small\item\em Run create table of a model. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_a9b78c90e7b0001864e768ea678009e29}{
+bool \hyperlink{classDQSql_a9b78c90e7b0001864e768ea678009e29}{dropTable} (\hyperlink{classDQModelMetaInfo}{DQModelMetaInfo} $\ast$info)}
+\label{classDQSql_a9b78c90e7b0001864e768ea678009e29}
+
+\begin{DoxyCompactList}\small\item\em Run drop table of a model. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_ab074c10f1c25e61380fabe5515d6ddb7}{
+bool \hyperlink{classDQSql_ab074c10f1c25e61380fabe5515d6ddb7}{createIndexIfNotExists} (const \hyperlink{classDQBaseIndex}{DQBaseIndex} \&index)}
+\label{classDQSql_ab074c10f1c25e61380fabe5515d6ddb7}
+
+\begin{DoxyCompactList}\small\item\em Create index. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_a9b389328d6ebf381aaca8befc722f5cb}{
+bool \hyperlink{classDQSql_a9b389328d6ebf381aaca8befc722f5cb}{dropIndexIfExists} (QString name)}
+\label{classDQSql_a9b389328d6ebf381aaca8befc722f5cb}
+
+\begin{DoxyCompactList}\small\item\em Drop index. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_a46fc9527f8a968c693ee34a82b77b234}{
+bool \hyperlink{classDQSql_a46fc9527f8a968c693ee34a82b77b234}{exists} (\hyperlink{classDQModelMetaInfo}{DQModelMetaInfo} $\ast$info)}
+\label{classDQSql_a46fc9527f8a968c693ee34a82b77b234}
+
+\begin{DoxyCompactList}\small\item\em Is the model exists on database? \item\end{DoxyCompactList}\item 
+bool \hyperlink{classDQSql_a5aaf8f147f532fe2044eaf16f98e8ee0}{insertInto} (\hyperlink{classDQModelMetaInfo}{DQModelMetaInfo} $\ast$info, \hyperlink{classDQModel}{DQModel} $\ast$model, QStringList fields, bool updateId)
+\begin{DoxyCompactList}\small\item\em Insert the reocrd to the database. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classDQSql_a07b32fbaea5d06db981864450283075a}{replaceInto} (\hyperlink{classDQModelMetaInfo}{DQModelMetaInfo} $\ast$info, \hyperlink{classDQModel}{DQModel} $\ast$model, QStringList fields, bool updateId)
+\begin{DoxyCompactList}\small\item\em Replace the record to the database. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_ac635760ea41ae97c8a492bfc2f21355a}{
+QSqlQuery \hyperlink{classDQSql_ac635760ea41ae97c8a492bfc2f21355a}{query} ()}
+\label{classDQSql_ac635760ea41ae97c8a492bfc2f21355a}
+
+\begin{DoxyCompactList}\small\item\em Create a query object to the connected database. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_a9aa5a1561cbd73dc5f4c271874adc072}{
+QSqlQuery \hyperlink{classDQSql_a9aa5a1561cbd73dc5f4c271874adc072}{lastQuery} ()}
+\label{classDQSql_a9aa5a1561cbd73dc5f4c271874adc072}
+
+\begin{DoxyCompactList}\small\item\em The last query object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDQSql_a4cf50ec3f96dcee4571a5045533e2f08}{DQSql} (DQSqlStatement $\ast$statement=0)
+\item 
+\hypertarget{classDQSql_aef87956547a14627a5198c1ff4dec101}{
+\hyperlink{classDQSql}{DQSql} \& \hyperlink{classDQSql_aef87956547a14627a5198c1ff4dec101}{operator=} (const \hyperlink{classDQSql}{DQSql} \&rhs)}
+\label{classDQSql_aef87956547a14627a5198c1ff4dec101}
+
+\begin{DoxyCompactList}\small\item\em Assignment operator overloading. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQSql_ac0ee242993455e44fdac4d5cefe784bd}{
+void \hyperlink{classDQSql_ac0ee242993455e44fdac4d5cefe784bd}{setDatabase} (QSqlDatabase db)}
+\label{classDQSql_ac0ee242993455e44fdac4d5cefe784bd}
+
+\begin{DoxyCompactList}\small\item\em Set the connected database. \item\end{DoxyCompactList}\item 
+void \hyperlink{classDQSql_a0865d62f39a13d243eabf00a6713899a}{setStatement} (DQSqlStatement $\ast$statement)
+\begin{DoxyCompactList}\small\item\em Assign a SQL statement generator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDQSql_a61c775c69c6581646215b987bc193808}{
+class \hyperlink{classDQSql_a61c775c69c6581646215b987bc193808}{DQConnection}}
+\label{classDQSql_a61c775c69c6581646215b987bc193808}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper class for SQL statement exeuction. \hyperlink{classDQSql}{DQSql} provides a set of pre-\/defined SQL operation over the connected database. It should be a thread safe object (not verified) and support implicitly sharing. Normally, you should get a copy of instance through \hyperlink{classDQConnection}{DQConnection} from any thread. You may call it freely and don't need to worry will \hyperlink{classDQSql_a9aa5a1561cbd73dc5f4c271874adc072}{lastQuery()} be overriden in another thread. A deep copy of object will be created when error.
+
+User are not supposed to use this class except for error checking. User may call \hyperlink{classDQSql_a9aa5a1561cbd73dc5f4c271874adc072}{lastQuery()} to retreive the detailed information of last query. It is useful to debug SQL level error.
+
+\begin{DoxyRemark}{Remarks}
+The thread safe capability is not verified. 
+
+It is implicitly shared classes 
+\end{DoxyRemark}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQSql_a4cf50ec3f96dcee4571a5045533e2f08}{
+\index{DQSql@{DQSql}!DQSql@{DQSql}}
+\index{DQSql@{DQSql}!DQSql@{DQSql}}
+\subsubsection[{DQSql}]{\setlength{\rightskip}{0pt plus 5cm}DQSql::DQSql (
+\begin{DoxyParamCaption}
+\item[{DQSqlStatement $\ast$}]{ statement = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}
+\label{classDQSql_a4cf50ec3f96dcee4571a5045533e2f08}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em statement}]A instance of DQSqlStatement. The ownership will be taken. \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQSql_a5aaf8f147f532fe2044eaf16f98e8ee0}{
+\index{DQSql@{DQSql}!insertInto@{insertInto}}
+\index{insertInto@{insertInto}!DQSql@{DQSql}}
+\subsubsection[{insertInto}]{\setlength{\rightskip}{0pt plus 5cm}bool DQSql::insertInto (
+\begin{DoxyParamCaption}
+\item[{{\bf DQModelMetaInfo} $\ast$}]{ info, }
+\item[{{\bf DQModel} $\ast$}]{ model, }
+\item[{QStringList}]{ fields, }
+\item[{bool}]{ updateId}
+\end{DoxyParamCaption}
+)}}
+\label{classDQSql_a5aaf8f147f532fe2044eaf16f98e8ee0}
+
+
+Insert the reocrd to the database. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em info}]The meta information of writing model \item[{\em model}]The data source \item[{\em fields}]A list of fields that should be saved \item[{\em updateId}]TRUE if the ID of the model should be updated after operation \end{DoxyParams}
+\hypertarget{classDQSql_a07b32fbaea5d06db981864450283075a}{
+\index{DQSql@{DQSql}!replaceInto@{replaceInto}}
+\index{replaceInto@{replaceInto}!DQSql@{DQSql}}
+\subsubsection[{replaceInto}]{\setlength{\rightskip}{0pt plus 5cm}bool DQSql::replaceInto (
+\begin{DoxyParamCaption}
+\item[{{\bf DQModelMetaInfo} $\ast$}]{ info, }
+\item[{{\bf DQModel} $\ast$}]{ model, }
+\item[{QStringList}]{ fields, }
+\item[{bool}]{ updateId}
+\end{DoxyParamCaption}
+)}}
+\label{classDQSql_a07b32fbaea5d06db981864450283075a}
+
+
+Replace the record to the database. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em info}]The meta information of writing model \item[{\em model}]The data source \item[{\em fields}]A list of fields that should be saved \item[{\em updateId}]TRUE if the ID of the model should be updated after operation \end{DoxyParams}
+\hypertarget{classDQSql_a0865d62f39a13d243eabf00a6713899a}{
+\index{DQSql@{DQSql}!setStatement@{setStatement}}
+\index{setStatement@{setStatement}!DQSql@{DQSql}}
+\subsubsection[{setStatement}]{\setlength{\rightskip}{0pt plus 5cm}void DQSql::setStatement (
+\begin{DoxyParamCaption}
+\item[{DQSqlStatement $\ast$}]{ statement}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDQSql_a0865d62f39a13d243eabf00a6713899a}
+
+
+Assign a SQL statement generator. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em statement}]A instance of DQSqlStatement. The ownership will be taken. \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/dqsql.h\item 
+src/dqsql.cpp\end{DoxyCompactItemize}
