@@ -1,0 +1,77 @@
+\hypertarget{dqclause_8h}{
+\section{src/dqclause.h File Reference}
+\label{dqclause_8h}\index{src/dqclause.h@{src/dqclause.h}}
+}
+
+
+Header file for \hyperlink{classDQClause}{DQClause}.  
+
+
+{\ttfamily \#include $<$QList$>$}\par
+{\ttfamily \#include $<$QVariant$>$}\par
+{\ttfamily \#include $<$QVector$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDQClause}{DQClause}
+\begin{DoxyCompactList}\small\item\em The clause of a column definition. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{dqclause_8h_aede52ea9e1a19097718c0db8053caa2d}{DQUnique}~\hyperlink{classDQClause}{DQClause}(DQClause::UNIQUE)
+\begin{DoxyCompactList}\small\item\em \char`\"{}Unique\char`\"{} clause \item\end{DoxyCompactList}\item 
+\#define \hyperlink{dqclause_8h_a400b2ce762bd0a0d6ec9b08603487b28}{DQNotNull}~\hyperlink{classDQClause}{DQClause}(DQClause::NOT\_\-NULL)
+\begin{DoxyCompactList}\small\item\em \char`\"{}NotNull\char`\"{} clause \item\end{DoxyCompactList}\item 
+\#define \hyperlink{dqclause_8h_a75d850e5a09646901dc081d053669698}{DQDefault}(value)~\hyperlink{classDQClause}{DQClause}(DQClause::DEFAULT,value)
+\begin{DoxyCompactList}\small\item\em The \char`\"{}Default\char`\"{} clause. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{dqclause_8h_aa4447e3f2cf46c4ac1700c4739fcbe07}{
+QString \hyperlink{dqclause_8h_aa4447e3f2cf46c4ac1700c4739fcbe07}{dqEscape} (QString val, bool trimStrings=false)}
+\label{dqclause_8h_aa4447e3f2cf46c4ac1700c4739fcbe07}
+
+\begin{DoxyCompactList}\small\item\em Encode the string. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{classDQClause}{DQClause}. \begin{DoxyAuthor}{Author}
+Ben Lau 
+\end{DoxyAuthor}
+
+
+\subsection{Define Documentation}
+\hypertarget{dqclause_8h_a75d850e5a09646901dc081d053669698}{
+\index{dqclause.h@{dqclause.h}!DQDefault@{DQDefault}}
+\index{DQDefault@{DQDefault}!dqclause.h@{dqclause.h}}
+\subsubsection[{DQDefault}]{\setlength{\rightskip}{0pt plus 5cm}\#define DQDefault(
+\begin{DoxyParamCaption}
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~{\bf DQClause}(DQClause::DEFAULT,value)}}
+\label{dqclause_8h_a75d850e5a09646901dc081d053669698}
+
+
+The \char`\"{}Default\char`\"{} clause. 
+
+Assign the default value of the field. If it is not set, then it will use the assigned value automatically. \hypertarget{dqclause_8h_a400b2ce762bd0a0d6ec9b08603487b28}{
+\index{dqclause.h@{dqclause.h}!DQNotNull@{DQNotNull}}
+\index{DQNotNull@{DQNotNull}!dqclause.h@{dqclause.h}}
+\subsubsection[{DQNotNull}]{\setlength{\rightskip}{0pt plus 5cm}\#define DQNotNull~{\bf DQClause}(DQClause::NOT\_\-NULL)}}
+\label{dqclause_8h_a400b2ce762bd0a0d6ec9b08603487b28}
+
+
+\char`\"{}NotNull\char`\"{} clause 
+
+This field must be set. Otherwise it will reject the write. \hypertarget{dqclause_8h_aede52ea9e1a19097718c0db8053caa2d}{
+\index{dqclause.h@{dqclause.h}!DQUnique@{DQUnique}}
+\index{DQUnique@{DQUnique}!dqclause.h@{dqclause.h}}
+\subsubsection[{DQUnique}]{\setlength{\rightskip}{0pt plus 5cm}\#define DQUnique~{\bf DQClause}(DQClause::UNIQUE)}}
+\label{dqclause_8h_aede52ea9e1a19097718c0db8053caa2d}
+
+
+\char`\"{}Unique\char`\"{} clause 
+
+The database field should be unique. No other record share the same value.
+
+e.g In a data model of user information , userId should be unique. 

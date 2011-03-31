@@ -1,0 +1,94 @@
+\hypertarget{classDQBaseField}{
+\section{DQBaseField Class Reference}
+\label{classDQBaseField}\index{DQBaseField@{DQBaseField}}
+}
+
+
+The base class of \hyperlink{classDQField}{DQField}.  
+
+
+
+
+{\ttfamily \#include $<$dqbasefield.h$>$}
+
+Inheritance diagram for DQBaseField:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDQBaseField}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDQBaseField_a709e2a9cf4c89158abe94208f329822f}{
+virtual bool \hyperlink{classDQBaseField_a709e2a9cf4c89158abe94208f329822f}{set} (QVariant value)}
+\label{classDQBaseField_a709e2a9cf4c89158abe94208f329822f}
+
+\begin{DoxyCompactList}\small\item\em Assign value to the field. \item\end{DoxyCompactList}\item 
+virtual QVariant \hyperlink{classDQBaseField_a11ae86916807e5c07a7682aa1df5076a}{get} (bool convert=false) const 
+\begin{DoxyCompactList}\small\item\em Get the value of the field. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQBaseField_a167e675eb89db3668da7cf641efa7347}{
+virtual QVariant \hyperlink{classDQBaseField_a167e675eb89db3668da7cf641efa7347}{operator=} (const QVariant \&val)}
+\label{classDQBaseField_a167e675eb89db3668da7cf641efa7347}
+
+\begin{DoxyCompactList}\small\item\em Assign the value from a QVariant type source. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQBaseField_a4525fb1805a119e1f8a02a3097f8e475}{
+QVariant $\ast$ \hyperlink{classDQBaseField_a4525fb1805a119e1f8a02a3097f8e475}{operator-\/$>$} ()}
+\label{classDQBaseField_a4525fb1805a119e1f8a02a3097f8e475}
+
+\begin{DoxyCompactList}\small\item\em Provides access to stored QVariant value. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQBaseField_a34625c95d2baf6794ab15a2c9adbe59e}{
+QVariant \hyperlink{classDQBaseField_a34625c95d2baf6794ab15a2c9adbe59e}{operator()} () const }
+\label{classDQBaseField_a34625c95d2baf6794ab15a2c9adbe59e}
+
+\begin{DoxyCompactList}\small\item\em Get the value of the field. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQBaseField_a6cb1f4cb9501b27818453ec37570580f}{
+\hyperlink{classDQBaseField_a6cb1f4cb9501b27818453ec37570580f}{operator QVariant} ()}
+\label{classDQBaseField_a6cb1f4cb9501b27818453ec37570580f}
+
+\begin{DoxyCompactList}\small\item\em Cast to QVariant. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQBaseField_a0c9970518c790bb356007470f0a6b8c1}{
+void \hyperlink{classDQBaseField_a0c9970518c790bb356007470f0a6b8c1}{clear} ()}
+\label{classDQBaseField_a0c9970518c790bb356007470f0a6b8c1}
+
+\begin{DoxyCompactList}\small\item\em Free up any resources used. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDQBaseField_a4cc6673744e8e43b55bf02854f08fa39}{
+static \hyperlink{classDQClause}{DQClause} \hyperlink{classDQBaseField_a4cc6673744e8e43b55bf02854f08fa39}{clause} ()}
+\label{classDQBaseField_a4cc6673744e8e43b55bf02854f08fa39}
+
+\begin{DoxyCompactList}\small\item\em The default clause of that field type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The base class of \hyperlink{classDQField}{DQField}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQBaseField_a11ae86916807e5c07a7682aa1df5076a}{
+\index{DQBaseField@{DQBaseField}!get@{get}}
+\index{get@{get}!DQBaseField@{DQBaseField}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}QVariant DQBaseField::get (
+\begin{DoxyParamCaption}
+\item[{bool}]{ convert = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classDQBaseField_a11ae86916807e5c07a7682aa1df5076a}
+
+
+Get the value of the field. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em convert}]True if the QVariant return should be converted to a type which is suitable for saving.\end{DoxyParams}
+Some data type like QStringList is not suitable for saving. User may override this function and convert its to other type. 
+
+Reimplemented in \hyperlink{classDQField_a17e36ac914ae0dd938f081f9ade514c7}{DQField$<$ T $>$}, \hyperlink{classDQField_a17e36ac914ae0dd938f081f9ade514c7}{DQField$<$ int $>$}, \hyperlink{classDQField_a7eb8d6686283fca855c3344b9ad77f36}{DQField$<$ T $>$}, and \hyperlink{classDQField_a7eb8d6686283fca855c3344b9ad77f36}{DQField$<$ T $>$}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/dqbasefield.h\item 
+src/dqbasefield.cpp\end{DoxyCompactItemize}

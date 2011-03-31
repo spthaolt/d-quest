@@ -1,0 +1,65 @@
+\hypertarget{classDQAbstractModel}{
+\section{DQAbstractModel Class Reference}
+\label{classDQAbstractModel}\index{DQAbstractModel@{DQAbstractModel}}
+}
+
+
+Abstract Data Model.  
+
+
+
+
+{\ttfamily \#include $<$dqabstractmodel.h$>$}
+
+Inheritance diagram for DQAbstractModel:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDQAbstractModel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDQAbstractModel_ab03df8f9993c3fc76f41b0d40eacfa41}{
+virtual \hyperlink{classDQModelMetaInfo}{DQModelMetaInfo} $\ast$ \hyperlink{classDQAbstractModel_ab03df8f9993c3fc76f41b0d40eacfa41}{metaInfo} () const }
+\label{classDQAbstractModel_ab03df8f9993c3fc76f41b0d40eacfa41}
+
+\begin{DoxyCompactList}\small\item\em Get the meta info object of the model. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classDQAbstractModel_a15358dd33ad88210b44233337ad8b065}{save} (bool forceInsert=false, bool forceAllField=false)=0
+\begin{DoxyCompactList}\small\item\em Save the record to database. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract Data Model. It is the based class of \hyperlink{classDQModel}{DQModel}. \begin{DoxyRemark}{Remarks}
+Never derive your own class based on \hyperlink{classDQAbstractModel}{DQAbstractModel}. Due to optimization , many classes like \hyperlink{classDQListWriter}{DQListWriter} assume that the only derived class is \hyperlink{classDQModel}{DQModel}. 
+\end{DoxyRemark}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQAbstractModel_a15358dd33ad88210b44233337ad8b065}{
+\index{DQAbstractModel@{DQAbstractModel}!save@{save}}
+\index{save@{save}!DQAbstractModel@{DQAbstractModel}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DQAbstractModel::save (
+\begin{DoxyParamCaption}
+\item[{bool}]{ forceInsert = {\ttfamily false}, }
+\item[{bool}]{ forceAllField = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classDQAbstractModel_a15358dd33ad88210b44233337ad8b065}
+
+
+Save the record to database. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em forceInsert}]TRUE if the data should be inserted to the database as a new record regardless of the original id. The id field will be updated after operation. \item[{\em forceAllField}]TRUE if all the field should be saved no matter it is null or not. If false, then null field will be skipped.\end{DoxyParams}
+If the id is not set , the record will be inserted to the database , then id field will be updated automatically. The successive call will update the record instead of insert unless forceInsert is TRUE. 
+
+Implemented in \hyperlink{classDQModel_a6807b1e090625800c949662485fd4fea}{DQModel}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/dqabstractmodel.h\item 
+src/dqabstractmodel.cpp\end{DoxyCompactItemize}

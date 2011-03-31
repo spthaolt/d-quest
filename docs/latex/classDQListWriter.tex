@@ -1,0 +1,284 @@
+\hypertarget{classDQListWriter}{
+\section{DQListWriter Class Reference}
+\label{classDQListWriter}\index{DQListWriter@{DQListWriter}}
+}
+
+
+\hyperlink{classDQListWriter}{DQListWriter} is a utility class to create the content on \hyperlink{classDQList}{DQList} object.  
+
+
+
+
+{\ttfamily \#include $<$dqlistwriter.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDQListWriter_a8473e70652e6c8d52fa3f95e5bf6a3e1}{DQListWriter} ()
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classDQListWriter}{DQListWriter} object. Before you can use it for reading or writing , you should call \hyperlink{classDQListWriter_a110d925f5cb84903546bea90729282f5}{open()} to assign a target list. \item\end{DoxyCompactList}\item 
+\hyperlink{classDQListWriter_a5981115ef7a1466815950d7055004fc2}{DQListWriter} (\hyperlink{classDQSharedList}{DQSharedList} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Construct a DQListwriter operates on target list. \item\end{DoxyCompactList}\item 
+\hyperlink{classDQListWriter_ad0d0605518f8f202dc552b8cee3cdcfe}{DQListWriter} (\hyperlink{classDQSharedList}{DQSharedList} $\ast$list, \hyperlink{classDQConnection}{DQConnection} connection)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classDQListWriter}{DQListWriter} operates on target list with specific database connection. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classDQListWriter_a110d925f5cb84903546bea90729282f5}{open} (\hyperlink{classDQSharedList}{DQSharedList} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Open and set the target list for writing. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQListWriter_a6519ad1ea45a4d3a0573bd6f728e40c8}{
+\hyperlink{classDQSharedList}{DQSharedList} $\ast$ \hyperlink{classDQListWriter_a6519ad1ea45a4d3a0573bd6f728e40c8}{list} ()}
+\label{classDQListWriter_a6519ad1ea45a4d3a0573bd6f728e40c8}
+
+\begin{DoxyCompactList}\small\item\em Get the target list for writing. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}{
+void \hyperlink{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}{append} (QVariant value)}
+\label{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}
+
+\begin{DoxyCompactList}\small\item\em Append a value to data model field. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQListWriter_ab4ace956b3bd520c68a6abbb6828e199}{
+void \hyperlink{classDQListWriter_ab4ace956b3bd520c68a6abbb6828e199}{close} ()}
+\label{classDQListWriter_ab4ace956b3bd520c68a6abbb6828e199}
+
+\begin{DoxyCompactList}\small\item\em Close the writer. \item\end{DoxyCompactList}\item 
+\hyperlink{classDQListWriter}{DQListWriter} \& \hyperlink{classDQListWriter_a140ea8cfafa768c3c0e2d1d0c3d855fd}{operator$<$$<$} (const QVariant value)
+\begin{DoxyCompactList}\small\item\em Append a value to data model field. \item\end{DoxyCompactList}\item 
+void \hyperlink{classDQListWriter_a88f4bf2ea7d855e86627da6478c5cd1f}{setConnection} (\hyperlink{classDQConnection}{DQConnection} value)
+\begin{DoxyCompactList}\small\item\em Set the database connection for newly created model. \item\end{DoxyCompactList}\item 
+\hypertarget{classDQListWriter_a90b0a3f1a599daf9510125e86df67f71}{
+\hyperlink{classDQConnection}{DQConnection} \hyperlink{classDQListWriter_a90b0a3f1a599daf9510125e86df67f71}{connection} ()}
+\label{classDQListWriter_a90b0a3f1a599daf9510125e86df67f71}
+
+\begin{DoxyCompactList}\small\item\em Get the database connection set for newly created model. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static QVariant \hyperlink{classDQListWriter_a5fbce83cb77c2ce6eaea54e39594d244}{next} ()
+\begin{DoxyCompactList}\small\item\em Return a symbol to close the stream to current input model. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classDQListWriter}{DQListWriter} is a utility class to create the content on \hyperlink{classDQList}{DQList} object. \begin{DoxyAuthor}{Author}
+Ben Lau
+\end{DoxyAuthor}
+\hyperlink{classDQListWriter}{DQListWriter} provides a stream interface for writing data to target \hyperlink{classDQList}{DQList}.
+
+In the first time you call \hyperlink{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}{append()} or $<$$<$ operator , \hyperlink{classDQListWriter}{DQListWriter} inserts a new model instance to the target list automatically.
+
+Then it bind a \hyperlink{classDQStream}{DQStream} object with the model instance, the input from \hyperlink{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}{append()} or $<$$<$ operator is redirected to the model instance through the \hyperlink{classDQStream}{DQStream} interface. The stream will be closed when all of the field is written already.
+
+The next time you call \hyperlink{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}{append()} or $<$$<$ operator will inserts a new model instance and repeat the above process.
+
+For example:
+
+Assume you have the following data model:
+
+
+\begin{DoxyCode}
+
+class HealthCheck : public DQModel {
+    DQ_MODEL
+public:
+
+    DQField<QString> name;
+    DQField<int>     height;
+    DQField<double>  weight;
+};
+
+DQ_DECLARE_MODEL(HealthCheck,
+                 "healthcheck",
+                 DQ_FIELD(name , DQNotNull),
+                 DQ_FIELD(height),
+                 DQ_FIELD(weight)
+                 );
+\end{DoxyCode}
+
+
+You may create the content on \hyperlink{classDQList}{DQList} by :
+
+
+\begin{DoxyCode}
+    DQList<HealthCheck> list;
+    DQListWriter writer(&list);
+
+    writer << "Tester 1" << 179 << 120.5; // list.size() == 1
+
+    writer << "Tester 2" << 160 << 80
+           << "Tester 3" << 120 << 60; // list.size() == 3
+\end{DoxyCode}
+
+
+Sometimes you may not want to set all of the field on the model instance. Only the first n-\/th column are interested. Then you may append the result of \hyperlink{classDQListWriter_a5fbce83cb77c2ce6eaea54e39594d244}{next()} to the stream, the stream will be closed immediately. The next \hyperlink{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}{append()} or trigger will trigger the insertion of new model instance.
+
+Example:
+
+
+\begin{DoxyCode}
+    DQList<HealthCheck> list;
+    DQListWriter writer(&list);
+
+    writer << "Tester 1" << 179 << DQListWriter::next()  // weight field is ignor
+      ed.
+           << "Tester 2" << 160 << writer.next() // An alternative to call next()
+      .
+           << "Tester 3" << 120;  // list.size() == 3
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{classDQStream}{DQStream} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDQListWriter_a8473e70652e6c8d52fa3f95e5bf6a3e1}{
+\index{DQListWriter@{DQListWriter}!DQListWriter@{DQListWriter}}
+\index{DQListWriter@{DQListWriter}!DQListWriter@{DQListWriter}}
+\subsubsection[{DQListWriter}]{\setlength{\rightskip}{0pt plus 5cm}DQListWriter::DQListWriter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classDQListWriter_a8473e70652e6c8d52fa3f95e5bf6a3e1}
+
+
+Construct a \hyperlink{classDQListWriter}{DQListWriter} object. Before you can use it for reading or writing , you should call \hyperlink{classDQListWriter_a110d925f5cb84903546bea90729282f5}{open()} to assign a target list. 
+
+\begin{DoxyAuthor}{Author}
+Ben Lau 
+\end{DoxyAuthor}
+\hypertarget{classDQListWriter_a5981115ef7a1466815950d7055004fc2}{
+\index{DQListWriter@{DQListWriter}!DQListWriter@{DQListWriter}}
+\index{DQListWriter@{DQListWriter}!DQListWriter@{DQListWriter}}
+\subsubsection[{DQListWriter}]{\setlength{\rightskip}{0pt plus 5cm}DQListWriter::DQListWriter (
+\begin{DoxyParamCaption}
+\item[{{\bf DQSharedList} $\ast$}]{ list}
+\end{DoxyParamCaption}
+)}}
+\label{classDQListWriter_a5981115ef7a1466815950d7055004fc2}
+
+
+Construct a DQListwriter operates on target list. 
+
+This constructor will construct the \hyperlink{classDQListWriter}{DQListWriter} object and open the target list for reading or writing. \begin{DoxySeeAlso}{See also}
+\hyperlink{classDQListWriter_a110d925f5cb84903546bea90729282f5}{open} 
+\end{DoxySeeAlso}
+\hypertarget{classDQListWriter_ad0d0605518f8f202dc552b8cee3cdcfe}{
+\index{DQListWriter@{DQListWriter}!DQListWriter@{DQListWriter}}
+\index{DQListWriter@{DQListWriter}!DQListWriter@{DQListWriter}}
+\subsubsection[{DQListWriter}]{\setlength{\rightskip}{0pt plus 5cm}DQListWriter::DQListWriter (
+\begin{DoxyParamCaption}
+\item[{{\bf DQSharedList} $\ast$}]{ list, }
+\item[{{\bf DQConnection}}]{ connection}
+\end{DoxyParamCaption}
+)}}
+\label{classDQListWriter_ad0d0605518f8f202dc552b8cee3cdcfe}
+
+
+Construct a \hyperlink{classDQListWriter}{DQListWriter} operates on target list with specific database connection. 
+
+This constructor will construct the \hyperlink{classDQListWriter}{DQListWriter} object and open the target list for reading or writing. Moreover, it will set the default database connection for newly created model.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDQListWriter_a110d925f5cb84903546bea90729282f5}{open} 
+
+\hyperlink{classDQListWriter_a88f4bf2ea7d855e86627da6478c5cd1f}{setConnection} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDQListWriter_a5fbce83cb77c2ce6eaea54e39594d244}{
+\index{DQListWriter@{DQListWriter}!next@{next}}
+\index{next@{next}!DQListWriter@{DQListWriter}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}QVariant DQListWriter::next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDQListWriter_a5fbce83cb77c2ce6eaea54e39594d244}
+
+
+Return a symbol to close the stream to current input model. 
+
+If the result of this function is passed to \hyperlink{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}{append()} or $<$$<$ operator, then the stream is closed immediately. The next call to \hyperlink{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}{append()} or $<$$<$ operator will insert a new model instance instead of write to the orignal writing model.
+
+Example model:
+
+
+\begin{DoxyCode}
+class HealthCheck : public DQModel {
+    DQ_MODEL
+public:
+
+    DQField<QString> name;
+    DQField<int>     height;
+    DQField<double>  weight;
+};
+
+DQ_DECLARE_MODEL(HealthCheck,
+                 "healthcheck",
+                 DQ_FIELD(name , DQNotNull),
+                 DQ_FIELD(height),
+                 DQ_FIELD(weight)
+                 );
+\end{DoxyCode}
+
+
+Example code: 
+\begin{DoxyCode}
+    DQList<HealthCheck> list;
+    DQListWriter writer(&list);
+
+    writer << "Tester 1" << 179 << DQListWriter::next()  // weight field is ignor
+      ed.
+           << "Tester 2" << 160 << writer.next() // An alternative to call next()
+      .
+           << "Tester 3" << 120;  // list.size == 3
+\end{DoxyCode}
+ \hypertarget{classDQListWriter_a110d925f5cb84903546bea90729282f5}{
+\index{DQListWriter@{DQListWriter}!open@{open}}
+\index{open@{open}!DQListWriter@{DQListWriter}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}bool DQListWriter::open (
+\begin{DoxyParamCaption}
+\item[{{\bf DQSharedList} $\ast$}]{ list}
+\end{DoxyParamCaption}
+)}}
+\label{classDQListWriter_a110d925f5cb84903546bea90729282f5}
+
+
+Open and set the target list for writing. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em list}]The target list for writing. The list must be binded with a data model(It's metaInfo() should be non-\/null) \end{DoxyParams}
+\hypertarget{classDQListWriter_a140ea8cfafa768c3c0e2d1d0c3d855fd}{
+\index{DQListWriter@{DQListWriter}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!DQListWriter@{DQListWriter}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DQListWriter} \& DQListWriter::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const QVariant}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{classDQListWriter_a140ea8cfafa768c3c0e2d1d0c3d855fd}
+
+
+Append a value to data model field. 
+
+\begin{DoxyRemark}{Remarks}
+It is a wrapper of \hyperlink{classDQListWriter_a0760f9b9ca173fc4516ec91c12031b2c}{append()}. 
+\end{DoxyRemark}
+\hypertarget{classDQListWriter_a88f4bf2ea7d855e86627da6478c5cd1f}{
+\index{DQListWriter@{DQListWriter}!setConnection@{setConnection}}
+\index{setConnection@{setConnection}!DQListWriter@{DQListWriter}}
+\subsubsection[{setConnection}]{\setlength{\rightskip}{0pt plus 5cm}void DQListWriter::setConnection (
+\begin{DoxyParamCaption}
+\item[{{\bf DQConnection}}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{classDQListWriter_a88f4bf2ea7d855e86627da6478c5cd1f}
+
+
+Set the database connection for newly created model. 
+
+\hyperlink{classDQListWriter}{DQListWriter} create new model on the target \hyperlink{classDQList}{DQList} when user append content. It will initialize model's connection according to the value set in this function.
+
+Usually you don't need to use this function unless you have multiple database connection in the application. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/dqlistwriter.h\item 
+src/dqlistwriter.cpp\end{DoxyCompactItemize}
