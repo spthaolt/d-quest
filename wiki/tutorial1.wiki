@@ -55,6 +55,7 @@ CREATE TABLE user  (
 Example code:
 
 {{{
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -72,11 +73,11 @@ int main(int argc, char *argv[])
 
     connection.addModel<User>(); // Register a model to the connection
 
-    connection.createTables(); // Create table for all added model if it is not existed.
+    connection.createTables(); // Create table for all added model
 
     User user;
 
-    if (!user.load( DQWhere("userId = " , "anonymous") )) { // Load the record from database where userId = anonymous
+    if (!user.load( DQWhere("userId") == "anonymous" )) { // Load the record from database where userId = anonymous
         // The account is not existed. Insert by ourself.
 
         user.userId = "anonymous"; // Assign the field value directly.
@@ -92,7 +93,9 @@ int main(int argc, char *argv[])
 
     qDebug() << user.userId << user.karma; // Result : QVariant(QString, "anonymous") QVariant(double, 0)
 
-    qDebug() << user.creationDate; // Result : the record creation time
+    qDebug() <<  user.creationDate; // Result : the record creation time
+
+    qDebug() << user; // Display all the field
 
     // Remarks: DQField can be casted to QVariant automatically
 
@@ -100,7 +103,6 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-
 }}}
 
 *Remove*
