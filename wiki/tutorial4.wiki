@@ -2,6 +2,11 @@
 
 == Declaration ==
 
+DQForeignKey is a special kind of DQField which can declare
+  a foreign key in SQL scheme.
+
+The foreign key constraints in SQL are used to enforce "exists" relationships between tables. It is a link to other record in same or other database table.
+
 To declare a model with foreign key , you just need to use DQForeignKey field type
 
 {{{
@@ -22,7 +27,8 @@ public:
 
 In this example , a and b is a foreign key to user table. The field store a integer of the key of user. Moreover , you may also access the "user" record from the foreign key directly.
 
-* Load model
+* Auto loading
+
 {{{
    FriendShip friendship;
    friendship.load(DQWhere("id =" ,1 ) );
@@ -31,9 +37,20 @@ In this example , a and b is a foreign key to user table. The field store a inte
 
 }}}
 
-DQForeignKey support -> operation overloading , it will return the instance of the 
-foreign model (e.g User in this example). If the model is not loaded, it will load 
-from database automatically.
+Moreover, DQForeignKey support an auto loading mechanism. You may access the record "linked" by the DQForeignKey through its extended interface (using -> operator).
+
+By default, DQForeignKey only store the foreign key value.  Whatever the user request to access the "linked" record field, it will be loaded automatically.
+
+* Assigment operator
+
+To link with other record, it is just need to use the "=" operator
+
+\code
+    User user;
+    user.load(DQWhere("id") == 1 );
+
+    friendship.b = user; // friendship.b will store the primary key of "user"
+\endcode
 
 * Save 
 {{{
