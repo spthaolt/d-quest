@@ -15,7 +15,7 @@ index << "field1" << "field2"; // field1 and field2 should be indexed.
 
 === Creation ===
 
-DQIndex only contains the information to create index. You made happen on the database. You have to call DQConnection.createIndex() 
+DQIndex only contains the information to create index. To made happen on the database, you have to call DQConnection.createIndex() 
 
 Example code:
 {{{
